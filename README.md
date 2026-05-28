@@ -2,6 +2,10 @@
 
 ##  Project Overview
 This project is an **Edge-AI prototype** designed for predictive maintenance of industrial motors. It monitors vibration intensity in real-time and provides local and remote alerts.
+## System Architecture
+Here is the block diagram showcasing the multi-core task distribution, peripheral interfacing, and inter-process communication (IPC) of the system:
+
+![System Architecture](vibration-monitor-architecture.png)
 
 ##  Live Simulation
 * [Run on Wokwi](https://wokwi.com/projects/new/esp32) 
