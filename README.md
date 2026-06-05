@@ -1,26 +1,63 @@
 # IoT Industrial Vibration Monitor using ESP32
 
-##  Project Overview
-This project is an **Edge-AI prototype** designed for predictive maintenance of industrial motors. It monitors vibration intensity in real-time and provides local and remote alerts.
+## Overview
+
+Industrial vibration monitoring system developed using ESP32 and MPU6050 for real-time machine health monitoring and predictive maintenance applications.
+
+The system continuously monitors vibration levels, processes sensor data locally, displays machine status on an OLED display, and provides remote monitoring through a web dashboard.
+
+## Key Features
+
+- Real-time vibration monitoring
+- MPU6050 sensor integration via I2C
+- OLED display visualization
+- Web-based monitoring dashboard
+- Threshold-based anomaly detection
+- ESP32 dual-core processing
+- FreeRTOS task scheduling
+- CAN/TWAI communication support
+
+## Hardware Used
+
+- ESP32 Dev Board
+- MPU6050 Accelerometer/Gyroscope
+- SSD1306 OLED Display
+- CAN Transceiver (Optional)
+
+## Software Stack
+
+- Embedded C++
+- FreeRTOS
+- ESP-IDF / Arduino Framework
+- I2C Communication
+- WiFi Networking
+- CAN/TWAI Protocol
+
+## Engineering Concepts Demonstrated
+
+- Embedded Firmware Development
+- Real-Time Operating Systems (RTOS)
+- Sensor Interfacing
+- Multi-tasking Applications
+- Industrial IoT
+- CAN Bus Communication
+- Edge Monitoring Systems
+
 ## System Architecture
-Here is the block diagram showcasing the multi-core task distribution, peripheral interfacing, and inter-process communication (IPC) of the system:
 
-![System Architecture](vibration-monitor-architecture.png)
+![Architecture](vibration-monitor-architecture.png)
 
-##  Live Simulation
-* [Run on Wokwi](https://wokwi.com/projects/new/esp32) 
+## Project Outcomes
 
-##  Hardware Stack
-* **MCU:** ESP32 (Dual-Core)
-* **Sensor:** MPU6050 (6-Axis Accelerometer & Gyroscope)
-* **Display:** SSD1306 OLED (128x64) via I2C
+- Successfully acquired vibration data from MPU6050
+- Implemented real-time threshold monitoring
+- Displayed live machine status on OLED
+- Enabled remote dashboard monitoring
+- Developed scalable firmware architecture using FreeRTOS
 
-##  Core Features
-* **I2C Bus Integration:** Multiple devices (Sensor + Display) on a single bus.
-* **Vector Magnitude Logic:** Calculates resultant acceleration $\sqrt{x^2 + y^2 + z^2}$ to detect anomalies.
-* **IoT Dashboard:** Integrated Web Server for remote monitoring via WiFi.
-* **Local Alert System:** Real-time threshold alerts on OLED display.
+## Future Improvements
 
-##  File Structure
-* `vibration_monitor.ino`: Main firmware code.
-* `diagram.json`: Digital wiring blueprint for Wokwi.
+- MQTT Cloud Integration
+- Machine Learning Based Fault Prediction
+- Data Logging using SD Card
+- OTA Firmware Updates
